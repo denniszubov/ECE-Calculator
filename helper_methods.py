@@ -6,10 +6,10 @@ def remove_spaces(line: str):
 
 # This method returns a list with all the unique characters in the string.
 def characters(line: str):
-    line = line.lower()
+    line = line.upper()
     chars = set()
     for c in line:
-        if c in "abcdefghijklmnopqrstuvwxyz":
+        if c in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
             chars.add(c)
     return_chars = list(chars)
     return_chars.sort()
