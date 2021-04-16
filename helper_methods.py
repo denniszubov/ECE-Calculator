@@ -21,12 +21,18 @@ def characters(line: str):
 def translate_input(bool_expression: str):
     bool_expression = remove_spaces(bool_expression)
     bool_expression = bool_expression.upper()
+    bool_expression = bool_expression.replace("XOR", "^")
     bool_expression = bool_expression.replace("AND", "&")
     bool_expression = bool_expression.replace("OR", "|")
     bool_expression = bool_expression.replace("NOT", "~")
-    bool_expression = bool_expression.replace("XOR", "^")
 
     input_chars = characters(bool_expression)
     input_info = {"expression": bool_expression, "num_inputs": len(input_chars), "input_chars": input_chars}
 
     return input_info
+
+def correct_binary_num(num: str, length: int):
+    current_length = len(num)
+    for i in range(length - current_length):
+        num = "0" + num
+    return num
