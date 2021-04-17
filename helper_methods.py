@@ -31,6 +31,7 @@ def translate_input(bool_expression: str):
 
     return input_info
 
+# This method pads the binary number with the required amount of 0s.
 def correct_binary_num(num: str, length: int):
     current_length = len(num)
     for i in range(length - current_length):
