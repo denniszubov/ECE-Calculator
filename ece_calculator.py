@@ -4,7 +4,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
+        MainWindow.setObjectName("Truth Table Generator")
         MainWindow.resize(815, 546)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -32,7 +32,6 @@ class Ui_MainWindow(object):
         # item = QtWidgets.QTableWidgetItem()
         # self.truth_table.setItem(0, 0, item)
         
-
         self.calculate_button = QtWidgets.QPushButton(self.centralwidget)
         self.calculate_button.setGeometry(QtCore.QRect(350, 140, 113, 32))
         self.calculate_button.setObjectName("calculate_button")
